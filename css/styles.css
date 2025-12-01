@@ -441,6 +441,7 @@ button {
   display: flex;
   align-items: center;
   text-align: center;
+  justify-content: center;
 }
 
 .status.preproduction 
@@ -448,7 +449,7 @@ button {
   background-color: #eeeb249a;
 }
 
-.status.prototype 
+.status.halted
 {
   background-color: #be33ff9a;
 }
@@ -459,6 +460,10 @@ button {
 .status.complete 
 {
   background-color: #2eff2e7c; 
+}
+.status.canceled
+{
+  background-color: #eb0c0cdc; 
 }
 
 .game_image 

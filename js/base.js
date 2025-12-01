@@ -43,7 +43,7 @@ async function BootUp()
     const main = document.querySelector('.main_content_boot');
     const header = document.querySelector('.header');
 
-    console.log("Boot:", boot, "Main:", main, "Header:", header); //Just to confirm everything is loaded
+    console.log("Boot:", boot, "Main:", main, "Header:", header);
 
     await new Promise(res => setTimeout(res, 2000));
     boot.classList.add('boot_hidden');

@@ -51,8 +51,8 @@ export function InitSkills() {
             <div class="skill_category">
             <h2>Programming Related</h2>
             <ul>
-                <li> C# / C++  / Java</li>
-                <li>Unity, Unreal</li>
+                <li> C# / C / C-Style C++ / Java</li>
+                <li>Unity, Unreal, Godot Engine</li>
             </ul>
             </div>
             <div class="skill_category">
@@ -81,8 +81,8 @@ export function InitProjects() {
         <h1 data-translations="projects">${GetTranslationFromKey('projects')}</h1>
         <div class="projects_container">
             <div class="game_card">
-                <div class="status development"><span>In Development</span></div>
-                <img src="../assets/placeholder_banner.png" class="game_image">
+                <div class="status complete"><span>Completed</span></div>
+                <img src="../assets/huddle_logo.png" class="game_image">
                 <div class="game_info">
                     <h2 class="game_title"></span>Huddle</h2>
                     <p class="game_genre">Third Person Arcade Horror</p>
@@ -95,7 +95,7 @@ export function InitProjects() {
                 </div>
             </div>
             <div class="game_card">
-                <div class="status preproduction"><span>In Pre-Production</span></div>
+                <div class="status halted"><span>Halted</span></div>
                 <img src="../assets/placeholder_banner.png" class="game_image">
                 <div class="game_info">
                     <h2 class="game_title"></span>"Project Blue Glow"</h2>
@@ -109,7 +109,7 @@ export function InitProjects() {
                 </div>
             </div>
              <div class="game_card">
-                <div class="status development"><span>In Development</span></div>
+                <div class="status canceled"><span>Canceled</span></div>
                 <img src="../assets/placeholder_banner.png" class="game_image">
                 <div class="game_info">
                     <h2 class="game_title"></span>FrutigerSpace Wiki</h2>
