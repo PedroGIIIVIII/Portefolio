@@ -24,7 +24,6 @@ export function InitAcademicPath() {
         const logcontainer = document.createElement('div');
         logcontainer.classList.add('log_text');
         logcontainer.classList.add('typestyle');
-        /* logcontainer.setAttribute('data-translations', 'academic_path_logs'); */
         each.innerHTML = `<div class="dot"></div>`;
         each.appendChild(logcontainer);
 
@@ -82,7 +81,7 @@ export function InitProjects() {
         <div class="projects_container">
             <div class="game_card">
                 <div class="status complete"><span>Completed</span></div>
-                <img src="../assets/huddle_logo.png" class="game_image">
+                <img src="../assets/'placeholder_banner'" class="game_image">
                 <div class="game_info">
                     <h2 class="game_title"></span>Huddle</h2>
                     <p class="game_genre">Third Person Arcade Horror</p>
