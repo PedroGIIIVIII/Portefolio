@@ -81,7 +81,7 @@ export function InitProjects() {
         <div class="projects_container">
             <div class="game_card">
                 <div class="status complete"><span>Completed</span></div>
-                <img src="../assets/'placeholder_banner'" class="game_image">
+                <img src="../assets/placeholder_banner.png" class="game_image">
                 <div class="game_info">
                     <h2 class="game_title"></span>Huddle</h2>
                     <p class="game_genre">Third Person Arcade Horror</p>
@@ -94,10 +94,24 @@ export function InitProjects() {
                 </div>
             </div>
             <div class="game_card">
+                <div class="status development"><span>In Development</span></div>
+                <img src="../assets/placeholder_banner.png" class="game_image">
+                <div class="game_info">
+                    <h2 class="game_title"></span>GeoZoo</h2>
+                    <p class="game_genre">Edutainment Game</p>
+                    <p class="game_role">My Roles: 2D Animator </p>
+                </div>
+                <div class="progress_section">
+                    <div class="progress_bar" data-progress="#">
+                        <div class="progress_fill"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="game_card">
                 <div class="status halted"><span>Halted</span></div>
                 <img src="../assets/placeholder_banner.png" class="game_image">
                 <div class="game_info">
-                    <h2 class="game_title"></span>"Project Blue Glow"</h2>
+                    <h2 class="game_title"></span>Project Blue Glow</h2>
                     <p class="game_genre">First Person Thriller Shooter</p>
                     <p class="game_role">My Roles: Sole Developer </p>
                 </div>
