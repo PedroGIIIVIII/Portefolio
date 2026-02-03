@@ -155,6 +155,7 @@ button {
     opacity: 0.2;
     transform: scale(0.95);
     pointer-events: none;
+    transition: opacity 0.2s ease-in, transform 0.2s ease-in-out;
 }
 
 /* Nav General CSS */
@@ -177,7 +178,7 @@ button {
     gap: 10px;
 }
 
-.nav_languages button:hover, .nav_home button:hover, .option_card:hover, .tab_icon:hover
+.nav_languages button:hover, .nav_home button:hover, .option_card:hover
 {
     background-color: #ffffff;
     color: #000000;
@@ -202,8 +203,6 @@ button {
     position: absolute; 
     min-height: 100vh;
     min-width: 100vw;
-    top: 0;
-    left: 0;
     justify-content: center;
     align-items: center;
     background-color: #111111;
@@ -219,11 +218,6 @@ button {
     animation: contentarrival 0.5s cubic-bezier(0.54, 0.13, 1, 1);
     min-height: calc(100vh - 60px);
     color: white;
-}
-
-.choosing_selection
-{
-    height: 50vh;
 }
 
 .card_selection 
@@ -279,8 +273,6 @@ button {
 .tab_icon {
     width: 100px;
     height: 100px;
-    background: #000000;
-    border: 2px solid #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -632,14 +624,6 @@ button {
     aspect-ratio: 16/9;
 }
 
-.work_card.non_interactable 
-{
-    opacity: 0.2;
-    transform: scale(0.98);
-    pointer-events: none;
-    transition: opacity 0.2s ease-in, transform 0.2s ease-in-out;
-}
-
 .work_info 
 {
     padding: 16px;
@@ -677,14 +661,6 @@ button {
         padding: 20px;
         align-items: stretch;
         justify-content: center;
-    }
-
-    .choosing_selection 
-    {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
     }
 
     .tab_icon 
@@ -768,11 +744,6 @@ button {
 
     .card_selection:nth-child(1),.card_selection:nth-child(2),.card_selection:nth-child(3),.card_selection:nth-child(4) {
         --x-off: 0;
-    }
-
-    .choosing_selection {
-        padding: 20px;
-        justify-content: center;
     }
 }
 
