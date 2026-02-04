@@ -11,7 +11,7 @@ export function GetTranslationFromKey(key) {
     return TRANSLATIONS_JSON[ActiveLang]?.[key]; //if the language exists then you can access the selected key.
 }
 
-export async function ChangeLanguage(lang) {
+export async function SwitchLanguage(lang) {
     ActiveLang = lang;
     const res = await fetch(BASE_PATH_JS + 'translations.json');
     TRANSLATIONS_JSON = await res.json();
@@ -28,10 +28,6 @@ function LoadTranslation(lang) {
             el.textContent = TRANSLATIONS_JSON[lang][key];
         }
     });
-}
-
-export function SwitchLanguage(lang) {
-    ChangeLanguage(lang);
 }
 
 window.SwitchLanguage = SwitchLanguage;

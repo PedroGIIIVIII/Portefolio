@@ -1,6 +1,6 @@
 import { BASE_PATH_COMPONENTS, LANGUAGES_FORMATTING, BASE_PATH } from './constants.js';
-import { ChangeLanguage } from './language_system.js';
-import { InitAcademicPath, InitSkills, InitProjects, InitGoals } from './block_renderer.js';
+import { SwitchLanguage } from './language_system.js';
+import { InitAcademicPath, InitSkills, InitProjects, InitGoals, InitModelGrid } from './block_renderer.js';
 
 window.onload = async function () {
     const buttonpaths = 
@@ -23,17 +23,19 @@ window.onload = async function () {
     await new Promise(res => setTimeout(res, 50));
     if (document.querySelector('.boot_screen') !== null) {
         await BootUp();
-        console.log("Boot Screen Completed")
     } else {
-        console.log("Boot Screen Failed")
         const header = document.querySelector('.header');
         if (header) {
             header.classList.remove('boot_hidden');
-            setTimeout(() => { header.classList.add('header_fall'); }, 100);
+            setTimeout(() => { header.classList.add('header_fall'); }, 50);
         }
     }
 
-    await ChangeLanguage(LANGUAGES_FORMATTING.ENGLISH);};
+    await SwitchLanguage(LANGUAGES_FORMATTING.ENGLISH);
+
+};
+   
+    InitModelGrid();
     Filter3DModelOptions()
 
 /* Misc */
@@ -42,8 +44,6 @@ async function BootUp()
     const boot = document.querySelector('.boot_screen');
     const main = document.querySelector('.main_content_boot');
     const header = document.querySelector('.header');
-
-    console.log("Boot:", boot, "Main:", main, "Header:", header);
 
     await new Promise(res => setTimeout(res, 2000));
     boot.classList.add('boot_hidden');
@@ -65,7 +65,7 @@ async function OpenHtml(Name) {
     header.classList.add('header_top');
     await new Promise(res => setTimeout(res, 1000));
 
-    window.location.href = `${BASE_PATH}pages/${Name}.html`;
+    window.location.href = `${BASE_PATH}/pages/${Name}.html`;
     
 }
 

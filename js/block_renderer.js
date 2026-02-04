@@ -58,7 +58,7 @@ export function InitSkills() {
                     <h2>Art Related</h2>
                 <ul>
                     <li>3D Artist</li>
-                    <li>Blender</li>
+                    <li>Blender, 3ds Max</li>
                 </ul>
             </div>
             <div class="skill_category">
@@ -148,4 +148,109 @@ export function InitGoals() {
             <h2>Something is being worked on...</h2>
         </div>
     `;
+}
+
+export function InitModelGrid() {
+    const container = document.querySelector('.gallery_grid')
+    container.innerHTML =
+    `
+        <div class="work_card" data-model-category="enemies" >
+        <img src="../assets/placeholder_banner.png" alt="Seal Model Render">
+            <div class="work_info">
+                <a href="#"><h2>Seal Model</h2></a>
+                <p>Stylized Low-Poly Model of a Leopard Seal for the videogame <a href=""><b>Huddle</b></a>.</p>
+            </div>
+        </div>
+        <div class="work_card" data-model-category="protagonists">
+        <img src="../assets/placeholder_banner.png" alt="Pinguim Model Render">
+            <div class="work_info">
+                <a href="#"><h2>Pinguim Model</h2></a>
+                <p>Stylized Low-Poly Model of a Pinguim for the videogame <a href=""><b>Huddle</b></a>.</p>
+            </div>
+        </div>
+        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
+        <img src="../assets/placeholder_banner.png" alt="#">
+            <div class="work_info">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
+                <p>#</p>
+                <p>#</p>
+            </div>
+        </div>
+        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
+        <img src="../assets/placeholder_banner.png" alt="#">
+            <div class="work_info">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
+                <p>#</p>
+                <p>#</p>
+            </div>
+        </div>
+        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
+        <img src="../assets/placeholder_banner.png" alt="#">
+            <div class="work_info">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
+                <p>#</p>
+                <p>#</p>
+            </div>
+        </div>
+        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
+        <img src="../assets/placeholder_banner.png" alt="#">
+            <div class="work_info">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
+                <p>#</p>
+                <p>#</p>
+            </div>
+        </div>
+        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
+        <img src="../assets/placeholder_banner.png" alt="#">
+            <div class="work_info">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
+                <p>#</p>
+                <p>#</p>
+            </div>
+        </div>
+        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
+        <img src="../assets/placeholder_banner.png" alt="#">
+            <div class="work_info">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
+                <p>#</p>
+                <p>#</p>
+            </div>
+        </div>
+        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
+        <img src="../assets/placeholder_banner.png" alt="#">
+            <div class="work_info">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
+                <p>#</p>
+                <p>#</p>
+            </div>
+        </div>
+        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
+        <img src="../assets/placeholder_banner.png" alt="#">
+            <div class="work_info">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
+                <p>#</p>
+                <p>#</p>
+            </div>
+        </div>
+        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
+        <img src="../assets/placeholder_banner.png" alt="#">
+            <div class="work_info">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
+                <p>#</p>
+                <p>#</p>
+            </div>
+        </div>
+        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
+        <img src="../assets/placeholder_banner.png" alt="#">
+            <div class="work_info">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
+                <p>#</p>
+                <p>#</p>
+            </div>
+        </div>
+    `
+}
+
+export function GenerateGenericModelInfoPanel() {
+    const container = documento.querySelector('.gallery_grid')
 }
