@@ -2,6 +2,65 @@ import { GetTranslationFromKey } from './language_system.js';
 
 export const AcademicStrings = { logs: [], i: 0 };
 
+const projects = [
+    {
+        id: 'huddle',
+        title: 'Huddle',
+        genre: 'Third Person Arcade Horror',
+        status: 'completed',
+        roles: ['3D Artist', '3D Environment Artist'],
+        year: '2025',
+        description: 'A thrilling third-person arcade horror experience where teamwork is key.',
+        fulldescription: 'Huddle is a third-person horror game focused on avoiding a murderer seal that plans on eating you alive. My Roles were as 3D Artist and Environment Artist, with that, i was responsible for crafting the visual identity of the game world from character models to the environments.',
+        technologies: ['Unity', 'Blender', 'Fmod'],
+        teamsize: '6 people',
+        images: ['../assets/placeholder_banner.png', '../assets/placeholder_banner.png'],
+        links: { github: '#', }
+    },
+    {
+        id: 'geozoo',
+        title: 'GeoZoo',
+        genre: 'Edutainment Game',
+        status: 'in development',
+        roles: ['2D Animator'],
+        year: '2024-Present',
+        description: 'An educational game about learning animals.',
+        fulldescription: 'GeoZoo is an edutainment project designed to make learning animals and its associated environments engaging and fun. I performed the role of 2D Animator which involves creating smooth, captivating animations for the animals.',
+        technologies: ['Unity', 'Photoshop', 'Adobe After Effects', 'Adobe Illustrator'],
+        teamsize: '5 people',
+        images: ['../assets/placeholder_banner.png', '../assets/placeholder_banner.png'],
+        links: { github: '#',}
+    },
+    {
+        id: 'blue-glow',
+        title: 'Project Blue Glow',
+        genre: 'First Person Thriller Shooter',
+        status: 'halted',
+        roles: ['Sole Developer'],
+        year: '2025-Present',
+        description: 'A solo project exploring first-person shooter mechanics with thriller elements.',
+        fulldescription: 'Project Blue Glow is a solo development effort where I handle all aspects of the development of the game while making a FPS combined with psychological thriller elements with it being currently halted to focus on other projects.',
+        technologies: ['Unity', 'C#'],
+        teamsize: '1 (Solo)',
+        images: ['../assets/placeholder_banner.png', '../assets/placeholder_banner.png'],
+        links: { github: '#',}
+    },
+    {
+        id: 'frutiger-wiki',
+        title: 'FrutigerSpace Wiki',
+        genre: 'Custom Wiki Platform',
+        status: 'canceled',
+        roles: ['Designer', 'Web Developer'],
+        year: '2023',
+        description: 'A specialized wiki platform for a video game community.',
+        fulldescription: 'FrutigerSpace Wiki was a web-based project aimed at creating a comprehensive wiki for a gaming community as part of the community of the game FrutigerSpace. Unfortunaly, the project was canceled to pursue other opportunities but served as valuable experience in web development and the architecture.',
+        technologies: ['HTML', 'PHP', 'CSS'],
+        teamsize: '2 people',
+        images: ['../assets/placeholder_banner.png', '../assets/placeholder_banner.png'],
+        links: { github: '#',}
+    }
+];
+
 export function InitAcademicPath() {
     const container = document.querySelector('.aboutme_content');
     const logs = GetTranslationFromKey("academic_path_logs");
@@ -78,65 +137,105 @@ export function InitProjects() {
     container.innerHTML = 
     `
         <h1 data-translations="projects">${GetTranslationFromKey('projects')}</h1>
-        <div class="projects_container">
-            <div class="game_card">
-                <div class="status complete"><span>Completed</span></div>
-                <img src="../assets/placeholder_banner.png" class="game_image">
-                <div class="game_info">
-                    <h2 class="game_title"></span>Huddle</h2>
-                    <p class="game_genre">Third Person Arcade Horror</p>
-                    <p class="game_role">My Roles: 3D Artist and 3D Enviroment Artist</p>
-                </div>
-                <div class="progress_section">
-                    <div class="progress_bar" data-progress="#">
-                        <div class="progress_fill"></div>
-                    </div>
-                </div>
+        <div class="projects_container" id="projects_list">
+        </div>
+        <div id="project_modal" class="project_modal"></div>
+    `;
+
+    const projectslist = document.getElementById('projects_list');
+    
+        projects.forEach(project => {
+        const statuslabel = project.status.charAt(0).toUpperCase() + project.status.slice(1);
+        const card = document.createElement('div');
+        card.className = 'game_card';
+        card.innerHTML = `
+            <div class="status ${project.status}"><span>${statuslabel}</span></div>
+            <img src="${project.images[0]}" class="game_image" alt="${project.title}">
+            <div class="game_info">
+                <h2 class="game_title">${project.title}</h2>
+                <p class="game_genre">${project.genre}</p>
+                <p class="game_role">My Roles: ${project.roles.join(', ')}</p>
             </div>
-            <div class="game_card">
-                <div class="status development"><span>In Development</span></div>
-                <img src="../assets/placeholder_banner.png" class="game_image">
-                <div class="game_info">
-                    <h2 class="game_title"></span>GeoZoo</h2>
-                    <p class="game_genre">Edutainment Game</p>
-                    <p class="game_role">My Roles: 2D Animator </p>
+        `;
+        
+        card.addEventListener('click', () => ShowProjectDetail(project));
+        projectslist.appendChild(card);
+    });
+}
+
+export function ShowProjectDetail(project) {
+    const modal = document.getElementById('project_modal');
+    const roleslist = project.roles.map(role => `<li>${role}</li>`).join('');
+    const techlist = project.technologies.map(tech => `<span class="tech_badge">${tech}</span>`).join('');
+    
+    modal.innerHTML = `
+        <div class="modal_overlay"></div>
+        <div class="modal_content">
+            <button class="modal_close" aria-label="Close">×</button>
+            
+            <div class="modal_header">
+                <div class="modal_status status ${project.status}">
+                    <span>${project.status.charAt(0).toUpperCase() + project.status.slice(1)}</span>
                 </div>
-                <div class="progress_section">
-                    <div class="progress_bar" data-progress="#">
-                        <div class="progress_fill"></div>
-                    </div>
-                </div>
+                <h1>${project.title}</h1>
+                <p class="modal_meta">${project.year} , ${project.teamsize}</p>
             </div>
-            <div class="game_card">
-                <div class="status halted"><span>Halted</span></div>
-                <img src="../assets/placeholder_banner.png" class="game_image">
-                <div class="game_info">
-                    <h2 class="game_title"></span>Project Blue Glow</h2>
-                    <p class="game_genre">First Person Thriller Shooter</p>
-                    <p class="game_role">My Roles: Sole Developer </p>
+
+            <div class="modal_body">
+                <div class="modal_gallery">
+                    <img src="${project.images[0]}" alt="${project.title}" class="modal_main_image">
                 </div>
-                <div class="progress_section">
-                    <div class="progress_bar" data-progress="#">
-                        <div class="progress_fill"></div>
-                    </div>
-                </div>
-            </div>
-             <div class="game_card">
-                <div class="status canceled"><span>Canceled</span></div>
-                <img src="../assets/placeholder_banner.png" class="game_image">
-                <div class="game_info">
-                    <h2 class="game_title"></span>FrutigerSpace Wiki</h2>
-                    <p class="game_genre">Custom wiki for a videogame</p>
-                    <p class="game_role">My Roles: Designer and WebDeveloper </p>
-                </div>
-                <div class="progress_section">
-                    <div class="progress_bar" data-progress="#">
-                        <div class="progress_fill"></div>
-                    </div>
+
+                <div class="modal_info">
+                    <section class="info_section">
+                        <h3>Overview</h3>
+                        <p>${project.fulldescription}</p>
+                    </section>
+
+                    <section class="info_section">
+                        <h3>My Roles</h3>
+                        <ul class="roles_list">
+                            ${roleslist}
+                        </ul>
+                    </section>
+
+                    <section class="info_section">
+                        <h3>Technologies</h3>
+                        <div class="tech_container">
+                            ${techlist}
+                        </div>
+                    </section>
+
+                    <section class="info_section">
+                        <h3>Links</h3>
+                        <div class="project_links">
+                            <a href="${project.links.github}" class="link_button" target="_blank">GitHub</a>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
     `;
+
+    modal.classList.add('active');
+    
+    const closeBtn = modal.querySelector('.modal_close');
+    const overlay = modal.querySelector('.modal_overlay');
+    
+    closeBtn.addEventListener('click', CloseProjectDetail);
+    overlay.addEventListener('click', CloseProjectDetail);
+    
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') CloseProjectDetail();
+    });
+}
+
+export function CloseProjectDetail() {
+    const modal = document.getElementById('project_modal');
+    modal.classList.remove('active');
+    setTimeout(() => {
+        modal.innerHTML = '';
+    }, 300);
 }
 
 export function InitGoals() {
@@ -150,107 +249,13 @@ export function InitGoals() {
     `;
 }
 
-export function InitModelGrid() {
-    const container = document.querySelector('.gallery_grid')
-    container.innerHTML =
-    `
-        <div class="work_card" data-model-category="enemies" >
-        <img src="../assets/placeholder_banner.png" alt="Seal Model Render">
-            <div class="work_info">
-                <a href="#"><h2>Seal Model</h2></a>
-                <p>Stylized Low-Poly Model of a Leopard Seal for the videogame <a href=""><b>Huddle</b></a>.</p>
-            </div>
-        </div>
-        <div class="work_card" data-model-category="protagonists">
-        <img src="../assets/placeholder_banner.png" alt="Pinguim Model Render">
-            <div class="work_info">
-                <a href="#"><h2>Pinguim Model</h2></a>
-                <p>Stylized Low-Poly Model of a Pinguim for the videogame <a href=""><b>Huddle</b></a>.</p>
-            </div>
-        </div>
-        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
-        <img src="../assets/placeholder_banner.png" alt="#">
-            <div class="work_info">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
-                <p>#</p>
-                <p>#</p>
-            </div>
-        </div>
-        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
-        <img src="../assets/placeholder_banner.png" alt="#">
-            <div class="work_info">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
-                <p>#</p>
-                <p>#</p>
-            </div>
-        </div>
-        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
-        <img src="../assets/placeholder_banner.png" alt="#">
-            <div class="work_info">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
-                <p>#</p>
-                <p>#</p>
-            </div>
-        </div>
-        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
-        <img src="../assets/placeholder_banner.png" alt="#">
-            <div class="work_info">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
-                <p>#</p>
-                <p>#</p>
-            </div>
-        </div>
-        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
-        <img src="../assets/placeholder_banner.png" alt="#">
-            <div class="work_info">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
-                <p>#</p>
-                <p>#</p>
-            </div>
-        </div>
-        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
-        <img src="../assets/placeholder_banner.png" alt="#">
-            <div class="work_info">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
-                <p>#</p>
-                <p>#</p>
-            </div>
-        </div>
-        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
-        <img src="../assets/placeholder_banner.png" alt="#">
-            <div class="work_info">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
-                <p>#</p>
-                <p>#</p>
-            </div>
-        </div>
-        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
-        <img src="../assets/placeholder_banner.png" alt="#">
-            <div class="work_info">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
-                <p>#</p>
-                <p>#</p>
-            </div>
-        </div>
-        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
-        <img src="../assets/placeholder_banner.png" alt="#">
-            <div class="work_info">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
-                <p>#</p>
-                <p>#</p>
-            </div>
-        </div>
-        <div class="work_card" data-model-category="enviromentassets" data-model-category="#">
-        <img src="../assets/placeholder_banner.png" alt="#">
-            <div class="work_info">
-                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1" target="_blank"><h2>Place_Holder</h2></a>
-                <p>#</p>
-                <p>#</p>
-            </div>
-        </div>
-    `
-}
-
 export function GenerateGenericModelInfoPanel() {
-    const container = documento.querySelector('.gallery_grid')
+    const container = document.querySelector('.gallery_grid');
+    if (!container) return;
+    
+    container.innerHTML = `
+        <div>
+            <img src="../assets/cute_cat.jpg" alt="Gallery Item">
+        </div>
+    `;
 }

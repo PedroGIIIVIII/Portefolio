@@ -1,6 +1,6 @@
 import { BASE_PATH_COMPONENTS, LANGUAGES_FORMATTING, BASE_PATH } from './constants.js';
 import { SwitchLanguage } from './language_system.js';
-import { InitAcademicPath, InitSkills, InitProjects, InitGoals, InitModelGrid } from './block_renderer.js';
+import { InitAcademicPath, InitSkills, InitProjects, InitGoals } from './block_renderer.js';
 
 window.onload = async function () {
     const buttonpaths = 
@@ -34,9 +34,6 @@ window.onload = async function () {
     await SwitchLanguage(LANGUAGES_FORMATTING.ENGLISH);
 
 };
-   
-    InitModelGrid();
-    Filter3DModelOptions()
 
 /* Misc */
 async function BootUp()
@@ -65,8 +62,8 @@ async function OpenHtml(Name) {
     header.classList.add('header_top');
     await new Promise(res => setTimeout(res, 1000));
 
-    window.location.href = `${BASE_PATH}/pages/${Name}.html`;
-    
+    window.location.href = `${BASE_PATH}pages/${Name}.html`;
+
 }
 
 async function HTMLComponentLoading(component, path) {
@@ -96,4 +93,16 @@ function Filter3DModelOptions() {
     });
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("[data-open]").forEach(card => {
+        card.addEventListener("click", () => {
+            const page = card.getAttribute("data-open");
+            OpenHtml(page);
+
+        });
+    });
+});
+
+
 window.OpenHtml = OpenHtml; //Exposes function
+window.Filter3DModelOptions = Filter3DModelOptions; //Exposes function
