@@ -12,7 +12,7 @@ window.onload = async function () {
     };
 
     for (const [k, i] of Object.entries(buttonpaths)) {
-        const element = document.querySelector(`[data-translations="${k}"]`);
+        const element = document.querySelector(`[entry="${k}"]`);
         if (element) {
             element.addEventListener("click", i);
         }
