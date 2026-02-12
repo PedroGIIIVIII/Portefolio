@@ -74,6 +74,7 @@ export const PROJECTS =
 export const MODELS = 
 [
     {
+        id: 'seal_huddle',
         name: '#',
-    }
+    },
 ] 

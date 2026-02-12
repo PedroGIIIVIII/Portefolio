@@ -1,5 +1,6 @@
 import { GetTranslationFromKey } from './language_system.js';
 import { PROJECTS } from './constants.js';
+import { MODELS} from './constants.js';
 
 export const AcademicStrings = { logs: [], i: 0 };
 
@@ -45,7 +46,7 @@ export function InitSkills() {
                         <span class="skill_name">C++</span>
                     </div>
                     <p class="skill_desc">
-                    |   #
+                    |   Basic Memory Managnment, Unreal Engine´s C++, Macros, Basic Gameplay Systems, Polymorphism
                     </p>
                 </div>
                 <span class="skill_level can_do">Can Do</span>
@@ -66,10 +67,10 @@ export function InitSkills() {
                         <span class="skill_name">C#</span>
                     </div>
                     <p class="skill_desc">
-                    |   #
+                    |   Core Gameplay Systems, Primitive AI Behavior, State Machines, Basic Shading, Basic Scripting Tools,
                     </p>
                 </div>
-                <span class="skill_level familiar">Familiar</span>
+                <span class="skill_level comfortable">Comfortable</span>
                 </div>
         </div>
         <div class="skill">
@@ -87,7 +88,49 @@ export function InitSkills() {
                         <span class="skill_name">C</span>
                     </div>
                     <p class="skill_desc">
-                    |   #
+                    |   Basic Programs, Memory Managnment, Procedural Logic
+                    </p>
+                </div>
+                <span class="skill_level experimental">experimental</span>
+                </div>
+        </div>
+        <div class="skill">
+            <div class="skill_header">
+                <div class="skill_left">
+                    <div class="skill_meter">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
+                    <div class="skill_title">
+                        <img class="skill_icon" src="../assets/java_icon.png">
+                        <span class="skill_name">Java</span>
+                    </div>
+                    <p class="skill_desc">
+                    |   OOP, Basic Programs, Polymorphism
+                    </p>
+                </div>
+                <span class="skill_level experimental">experimental</span>
+                </div>
+        </div>
+        <div class="skill">
+            <div class="skill_header">
+                <div class="skill_left">
+                    <div class="skill_meter">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
+                    <div class="skill_title">
+                        <img class="skill_icon" src="../assets/python_icon.png">
+                        <span class="skill_name">Python</span>
+                    </div>
+                    <p class="skill_desc">
+                    |   Scripting
                     </p>
                 </div>
                 <span class="skill_level experimental">experimental</span>
@@ -111,7 +154,7 @@ export function InitSkills() {
                         <span class="skill_name">Blender</span>
                     </div>
                     <p class="skill_desc">
-                    |   #
+                    |   Character Creation, Environment Asset Creation, Rigging, Texturing, Material Creation, UV Unwrapping
                     </p>
                 </div>
                 <span class="skill_level comfortable">Comfortable</span>
@@ -133,7 +176,7 @@ export function InitSkills() {
                         <span class="skill_name">3DS Max</span>
                     </div>
                     <p class="skill_desc">
-                    |   #
+                    |   Basic 3D Modelling
                     </p>
                 </div>
                 <span class="skill_level experimental">Experimental</span>
@@ -155,10 +198,31 @@ export function InitSkills() {
                         <span class="skill_name">Source Filmmaker</span>
                     </div>
                     <p class="skill_desc">
-                    |   #
+                    |   Motion Based Animation, Graph Based Animation, Modelling Decompression, Model Optimization for the Source Engine
                     </p>
                 </div>
                 <span class="skill_level capable">Capable</span>
+                </div>
+        </div>
+        <div class="skill">
+            <div class="skill_header">
+                <div class="skill_left">
+                    <div class="skill_meter">
+                        <span class="dot active"></span>
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
+                    <div class="skill_title">
+                        <img class="skill_icon" src="../assets/substancepainter_icon.png">
+                        <span class="skill_name">Substance Painter</span>
+                    </div>
+                    <p class="skill_desc">
+                    |   Material Creation, Mapping
+                    </p>
+                </div>
+                <span class="skill_level can_do">Can Do</span>
                 </div>
         </div>
     </div>
@@ -170,8 +234,7 @@ export function InitProjects() {
     container.innerHTML = 
     `
         <h1 data-translations="projects">Projects</h1>
-        <div class="projects_container" id="projects_list">
-        </div>
+        <div class="projects_container" id="projects_list"></div>
         <div id="project_modal" class="project_modal"></div>
     `;
 
@@ -263,6 +326,24 @@ export function ShowProjectDetail(PROJECTS) { //Modular DIV for display of proje
     });
 }
 
+export function ShowModelDetail(MODELS) { //Modular DIV for display of models
+    const modal = document.getElementsByClassName('models_modal');
+
+    MODELS.forEach(models => {
+        
+    })
+
+
+    modal.innerHTML = `
+        <div class="modal_overlay"></div>
+        <div class="models_modal_content">
+            <button class="modal_close" aria-label="Close">×</button>
+            <h2>${MODELS.name}</h2>
+        </div>
+    `;
+    modal.classList.add('active');
+}
+
 export function CloseProjectDetail() {
     const modal = document.getElementById('project_modal');
     modal.classList.remove('active');
@@ -278,21 +359,6 @@ export function InitGoals() {
         <h1 data-translations="goals">${GetTranslationFromKey('goals')}</h1>
         <div>
             <h2>Something is being worked on...</h2>
-        </div>
-    `;
-}
-
-export function GenerateGenericModelInfoPanel() {
-    const container = document.querySelector('.gallery_grid');
-    if (!container) 
-    {
-        return;
-    } 
-    
-    container.innerHTML = 
-    `
-        <div>
-            <img src="../assets/cute_cat.jpg" alt="Gallery Item">
         </div>
     `;
 }

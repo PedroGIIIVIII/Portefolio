@@ -120,12 +120,16 @@ button {
     transform: translateX(-50%);
     background: #000000;
     padding: 10px 20px;
-    border: 2px solid #ffffff;
+    border: 2px solid rgb(238, 162, 20);
     font-size: 0.9rem;
     pointer-events: none;
     font-family: 'Space Mono', monospace;
     text-align: center;
-    color: #ffc934;
+}
+
+.mobile_warning p
+{
+    color: rgb(238, 162, 20)
 }
 
 .tooltip_text {
@@ -143,7 +147,6 @@ button {
   left: 50%;
   transform: translateX(-50%);
   opacity: 0;
-  transition: opacity 0.3s;
 }
 
 .mobile_warning_container:hover .tooltip_text {
@@ -155,7 +158,6 @@ button {
     opacity: 0.2;
     transform: scale(0.95);
     pointer-events: none;
-    transition: opacity 0.2s ease-in, transform 0.2s ease-in-out;
 }
 
 /* Nav General CSS */
@@ -567,18 +569,18 @@ button {
 .work_card
  {
     border: 2px solid #ffffff;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     cursor: pointer;
     justify-content: space-between;
     padding: 10px;
     box-sizing: border-box;
-    transition: opacity 0.2s ease-in-out, transform 0.2s ease-out;
 }
 
 .work_card:hover 
 {
-    transform: scale(1.02);
+    transform: scale(1.05);
 }
 
 .work_card img 
@@ -646,15 +648,19 @@ button {
 }
 
 .skill_level.comfortable {
-    background: #2eff2e33;
+    background: #2eff2e88;
 }
 
 .skill_level.familiar {
-    background: #fca52333;
+    background: #fca523a4;
 }
 
 .skill_level.experimental {
-    background: #ffffff22;
+    background: #ffffff96;
+}
+
+.skill_level.can_do {
+    background: #5a464696;
 }
 
 .skill_icon {
@@ -699,6 +705,43 @@ button {
     height: 100vh;
     z-index: -1;
     pointer-events: none;
+}
+
+.models_modal 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.models_modal.active
+{
+    z-index: 100;
+    pointer-events: auto;
+}
+
+.models_modal_content
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #111111;
+    border: 2px solid #ffffff;
+    max-width: 85vw;
+    max-height: 85vh;
+    width: 900px;
+    overflow-y: auto;
+    z-index: 101;
+    animation: slidein 1s ease-in;
+    display: flex;
+    flex-direction: column;
+    scrollbar-color: rgb(255, 255, 255) rgb(17, 17, 17);
+    scrollbar-width: thin;
 }
 
 #project_modal.active {
