@@ -756,7 +756,6 @@ button {
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.7);
-    animation: fadein 0.3s ease;
 }
 
 .modal_content {

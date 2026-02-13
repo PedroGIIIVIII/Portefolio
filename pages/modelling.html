@@ -23,21 +23,21 @@
             </div>
 
             <div class="gallery_grid">
-                <div class="work_card" data-model-category="enemies" >
+                <div class="work_card" data-model-category="enemies" data-id="seal_huddle">
                     <img src="../assets/placeholder_banner.png" alt="Seal Model Render">
                     <div class="work_info">
                         <h2>Seal Model</h2>
                         <p>Stylized Low-Poly Model of a Leopard Seal for the videogame <a href=""><b>Huddle</b></a>.</p>
                     </div>
                 </div>
-                <div class="work_card" data-model-category="protagonists">
+                <div class="work_card" data-model-category="protagonists" data-id="penguin">
                     <img src="../assets/placeholder_banner.png" alt="Pinguim Model Render">
                         <div class="work_info">
                             <h2>Pinguim Model</h2>
                             <p>Stylized Low-Poly Model of a Pinguim for the videogame <a href=""><b>Huddle</b></a>.</p>
                         </div>
                 </div>
-                <div class="work_card" data-model-category="highpoly" data-model-category="#">
+                <div class="work_card" data-model-category="highpoly" data-id="spacecraft">
                     <img src="../assets/placeholder_banner.png" alt="#">
                     <div class="work_info">
                         <h2>Lamp Spaceship</h2>
@@ -56,6 +56,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         Filter3DModelOptions();
+        InitModels();
 });
 </script>
 </html>
