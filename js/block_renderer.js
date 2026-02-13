@@ -33,13 +33,6 @@ export function InitSkills() {
         <div class="skill">
             <div class="skill_header">
                 <div class="skill_left">
-                    <div class="skill_meter">
-                        <span class="dot active"></span>
-                        <span class="dot active"></span>
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                    </div>
-
                     <div class="skill_title">
                         <img class="skill_icon" src="../assets/csharp_icon.png">
                         <span class="skill_name">C#</span>
@@ -54,13 +47,6 @@ export function InitSkills() {
         <div class="skill">
             <div class="skill_header">
                 <div class="skill_left">
-                    <div class="skill_meter">
-                        <span class="dot active"></span>
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-
                     <div class="skill_title">
                         <img class="skill_icon" src="../assets/cpp_icon.png">
                         <span class="skill_name">C++</span>
@@ -75,13 +61,6 @@ export function InitSkills() {
         <div class="skill">
             <div class="skill_header">
                 <div class="skill_left">
-                    <div class="skill_meter">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-
                     <div class="skill_title">
                         <img class="skill_icon" src="../assets/c_icon.png">
                         <span class="skill_name">C</span>
@@ -96,13 +75,6 @@ export function InitSkills() {
         <div class="skill">
             <div class="skill_header">
                 <div class="skill_left">
-                    <div class="skill_meter">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-
                     <div class="skill_title">
                         <img class="skill_icon" src="../assets/java_icon.png">
                         <span class="skill_name">Java</span>
@@ -117,13 +89,6 @@ export function InitSkills() {
         <div class="skill">
             <div class="skill_header">
                 <div class="skill_left">
-                    <div class="skill_meter">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-
                     <div class="skill_title">
                         <img class="skill_icon" src="../assets/python_icon.png">
                         <span class="skill_name">Python</span>
@@ -141,13 +106,6 @@ export function InitSkills() {
          <div class="skill">
             <div class="skill_header">
                 <div class="skill_left">
-                    <div class="skill_meter">
-                        <span class="dot active"></span>
-                        <span class="dot active"></span>
-                        <span class="dot active"></span>
-                        <span class="dot active"></span>
-                    </div>
-
                     <div class="skill_title">
                         <img class="skill_icon" src="../assets/sfm_icon.png">
                         <span class="skill_name">Source Filmmaker</span>
@@ -162,13 +120,6 @@ export function InitSkills() {
         <div class="skill">
             <div class="skill_header">
                 <div class="skill_left">
-                    <div class="skill_meter">
-                        <span class="dot active"></span>
-                        <span class="dot active"></span>
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                    </div>
-
                     <div class="skill_title">
                         <img class="skill_icon" src="../assets/blender_icon.png">
                         <span class="skill_name">Blender</span>
@@ -183,13 +134,6 @@ export function InitSkills() {
         <div class="skill">
             <div class="skill_header">
                 <div class="skill_left">
-                    <div class="skill_meter">
-                        <span class="dot active"></span>
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-
                     <div class="skill_title">
                         <img class="skill_icon" src="../assets/substancepainter_icon.png">
                         <span class="skill_name">Substance Painter</span>
@@ -204,13 +148,6 @@ export function InitSkills() {
         <div class="skill">
             <div class="skill_header">
                 <div class="skill_left">
-                    <div class="skill_meter">
-                        <span class="dot active"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-
                     <div class="skill_title">
                         <img class="skill_icon" src="../assets/3ds_icon.png">
                         <span class="skill_name">3DS Max</span>

@@ -679,23 +679,6 @@ button {
     opacity: 0.85;
     margin-top: 4px;
 }
-.skill_meter {
-    display: flex;
-    gap: 6px;
-    margin: 6px 0 4px 0;
-}
-
-.skill_meter .dot {
-    width: 6px;
-    height: 6px;
-    border: 1px solid white;
-    opacity: 0.3;
-}
-
-.skill_meter .dot.active {
-    opacity: 1;
-    background: white;
-}
 
 #project_modal {
     position: fixed;
