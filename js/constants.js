@@ -76,31 +76,41 @@ export const MODELS =
     {
         id: 'seal_huddle',
         name: 'Seal Model',
-        category: 'enemies',
         description: 'Stylized low-poly model of a seal for the videogame Huddle.',
         software: ['Blender'],
-        polygoncount: 'X quads',
-        img: ['../assets/placeholder_banner.png'],
+        polygoncount: '1,482 quads',
+        enginereadiness: 'Unreal Engine',
+        img: ['../assets/model_img/seal/seal_material.jpg'],
         projectlink: '#'
     },
     {
         id: 'penguin',
         name: 'Penguin Model',
-        category: 'enemies',
         description: 'Stylized Low-Poly Model of the main protagonist for the videogame Huddle.',
         software: ['Blender'],
         polygoncount: 'X quads',
-        img: ['../assets/placeholder_banner.png'],
+        enginereadiness: 'Unreal Engine',
+        img: ['./assets/model_img/penguin/'],
+        projectlink: '#'
+    },
+        {
+        id: 'queen',
+        name: 'Penguin Queen Model',
+        description: 'Stylized Low-Poly Model of a character for the videogame Huddle.',
+        software: ['Blender'],
+        polygoncount: 'X quads',
+        enginereadiness: 'Unreal Engine',
+        img: ['../assets/model_img/queen/queen_material.jpg'],
         projectlink: '#'
     },
     {
         id: 'spacecraft',
         name: 'Spacecraft Model',
-        category: 'enemies',
         description: 'Used a everyday lamp and transformed into a spaceship',
         software: ['Blender', 'Substance Painter'],
         polygoncount: 'X quads',
-        img: ['../assets/placeholder_banner.png'],
+        enginereadiness: 'Unreal Engine',
+        img: ['../assets/model_img/spaceship/high_poly_material_ship.jpg'],
         projectlink: '#'
     }
 ] 

@@ -193,7 +193,6 @@ export function InitProjects() {
         projectslist.appendChild(card);
     });
 }
-
 export function ShowProjectDetail(PROJECTS) { //Modular DIV for display of projects
     const modal = document.getElementById('project_modal');
     const roleslist = PROJECTS.roles.map(role => `<li>${role}</li>`);
@@ -214,7 +213,7 @@ export function ShowProjectDetail(PROJECTS) { //Modular DIV for display of proje
 
             <div class="modal_body">
                 <div class="modal_gallery">
-                    <img src="${PROJECTS.images[0]}" alt="${PROJECTS.title}" class="modal_main_image">
+                    <img src="${PROJECTS.images}" alt="#" class="modal_main_image">
                 </div>
 
                 <div class="modal_info">
@@ -263,7 +262,7 @@ export function ShowModelDetails(m)
 
     const modal = document.querySelector('.models_modal');
 
-    const softwarelist = m.software.map(soft => `<span class="tech_badge">${soft}</span>`).join('');
+    const softwarelist = m.software.map(software => `<span class="tech_badge">${software}</span>`).join('');
 
     modal.innerHTML = `
         <div class="modal_overlay"></div>
@@ -298,7 +297,8 @@ export function ShowModelDetails(m)
 
                     <section class="info_section">
                         <h3>Technical Info</h3>
-                        <p>Polygon Count: ${m.polygoncount}</p>
+                        <p>Polygon Count: <b>${m.polygoncount}</b></p>
+                        <p>Engine Readiness: <b>${m.enginereadiness}</b></p>
                     </section>
 
                 </div>
