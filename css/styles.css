@@ -809,16 +809,15 @@ button {
     display: flex;
     gap: 30px;
     padding: 30px;
-    flex: 1;
 }
 
 .modal_gallery {
-    flex: 2;
+    flex: 1;
 }
 
 .modal_main_image {
     width: 100%;
-    height: 100%;
+    height: auto;
     border: 2px solid #ffffff;
 }
 
@@ -831,6 +830,15 @@ button {
     padding-right: 10px;
     scrollbar-color: rgb(255, 255, 255) rgb(17, 17, 17);
     scrollbar-width: thin;
+}
+
+.modal_imgs 
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px;
+    overflow: auto;
+
 }
 
 .info_section h3 {

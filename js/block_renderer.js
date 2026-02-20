@@ -258,8 +258,6 @@ export function ShowProjectDetail(PROJECTS) { //Modular DIV for display of proje
 
 export function ShowModelDetails(m)
 {
-    console.log("Opened Context Window")
-
     const modal = document.querySelector('.models_modal');
 
     const softwarelist = m.software.map(software => `<span class="tech_badge">${software}</span>`).join('');
@@ -276,9 +274,9 @@ export function ShowModelDetails(m)
 
             <div class="modal_body">
                 <div class="modal_gallery">
-                    <img src="${m.img}" 
-                    alt="${m.name}" 
-                    class="modal_main_image">
+                    <img src="${m.img_assets[0]}" class="modal_main_image">
+                    <img src="${m.img_assets[1]}" class="modal_main_image">
+                    <img src="${m.img_assets[2]}" class="modal_main_image">
                 </div>
 
                 <div class="modal_info">
@@ -299,6 +297,7 @@ export function ShowModelDetails(m)
                         <h3>Technical Info</h3>
                         <p>Polygon Count: <b>${m.polygoncount}</b></p>
                         <p>Engine Readiness: <b>${m.enginereadiness}</b></p>
+                        <p>Modelling Style: <b>${m.modellingstyle}</b></p>
                     </section>
 
                 </div>
@@ -317,7 +316,6 @@ export function InitModels() {
 
         const id = card.dataset.id;
         const m_d = MODELS.find(x => x.id === id);
-        console.log("Log model")
         if (!m_d)
         {
             return;

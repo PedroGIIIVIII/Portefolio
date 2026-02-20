@@ -22,7 +22,7 @@ export const PROJECTS =
         year: '2025',
         description: 'A thrilling third-person arcade horror experience where teamwork is key.',
         fulldescription: 'Huddle is a third-person horror game focused on avoiding a murderer seal that plans on eating you alive. My Roles were as 3D Artist and Environment Artist, with that, i was responsible for crafting the visual identity of the game world from character models to the environments.',
-        technologies: ['Unity', 'Blender', 'Fmod'],
+        technologies: ['Unity', 'Blender', 'FMOD'],
         teamsize: '5 people',
         images: ['../assets/placeholder_banner.png'],
         links: { github: 'https://github.com/PedroGIIIVIII/Huddle'}
@@ -80,37 +80,47 @@ export const MODELS =
         software: ['Blender'],
         polygoncount: '1,482 quads',
         enginereadiness: 'Unreal Engine',
-        img: ['../assets/model_img/seal/seal_material.jpg'],
-        projectlink: '#'
+        modellingstyle: 'Retopology from Sculpted Figure',
+        img_assets: ['../assets/model_img/seal/seal_material.jpg', '../assets/model_img/seal/seal_material_2.jpg', '../assets/model_img/seal/seal_material_3.jpg'],
     },
     {
         id: 'penguin',
         name: 'Penguin Model',
         description: 'Stylized Low-Poly Model of the main protagonist for the videogame Huddle.',
         software: ['Blender'],
-        polygoncount: 'X quads',
+        polygoncount: '1,054 quads',
         enginereadiness: 'Unreal Engine',
-        img: ['./assets/model_img/penguin/'],
-        projectlink: '#'
+        modellingstyle: 'Retopology from Sculpted Figure',
+        img_assets: ['../assets/model_img/penguin/penguin_material_1.jpg', '../assets/model_img/penguin/penguin_material_2.jpg', '../assets/model_img/penguin/penguin_material_3.png'],
     },
-        {
+    {
         id: 'queen',
         name: 'Penguin Queen Model',
         description: 'Stylized Low-Poly Model of a character for the videogame Huddle.',
         software: ['Blender'],
-        polygoncount: 'X quads',
+        polygoncount: '1,622 quads',
         enginereadiness: 'Unreal Engine',
-        img: ['../assets/model_img/queen/queen_material.jpg'],
-        projectlink: '#'
+        modellingstyle: 'Retopology from Sculpted Figure',
+        img_assets: ['../assets/model_img/queen/queen_material.jpg', '../assets/model_img/queen/queen_material_2.jpg', '../assets/model_img/queen/queen_material_3.jpg'],
+    },
+        {
+        id: 'sword',
+        name: 'Sword Model',
+        description: 'A custom sword made for animation purposes in SourceFilmmaker.',
+        software: ['Blender'],
+        polygoncount: '1,569 quads',
+        enginereadiness: 'Source Engine',
+        modellingstyle: 'Primitive form modelling',
+        img_assets: ['../assets/model_img/queen/queen_material.jpg', '../assets/model_img/queen/queen_material_2.jpg', '../assets/model_img/queen/queen_material_3.jpg'],
     },
     {
         id: 'spacecraft',
         name: 'Spacecraft Model',
-        description: 'Used a everyday lamp and transformed into a spaceship',
+        description: 'Exercise to transformed an item used in everyday life into something else.',
         software: ['Blender', 'Substance Painter'],
-        polygoncount: 'X quads',
-        enginereadiness: 'Unreal Engine',
-        img: ['../assets/model_img/spaceship/high_poly_material_ship.jpg'],
-        projectlink: '#'
+        polygoncount: '116,064 quads',
+        enginereadiness: 'None',
+        modellingstyle: 'Primitive form modelling',
+        img_assets: ['../assets/model_img/spaceship/high_poly_material_ship.jpg', '../assets/model_img/spaceship/high_poly_material_ship_2.jpg', '../assets/model_img/spaceship/high_poly_material_ship_3.jpg'],
     }
 ] 
