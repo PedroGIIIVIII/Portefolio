@@ -213,7 +213,9 @@ export function ShowProjectDetail(PROJECTS) { //Modular DIV for display of proje
 
             <div class="modal_body">
                 <div class="modal_gallery">
-                    <img src="${PROJECTS.images}" alt="#" class="modal_main_image">
+                    <video class="modal_main_image" autoplay loop>
+                    <source src="${PROJECTS.vids}" type="video/mp4">
+                    </video>
                 </div>
 
                 <div class="modal_info">
@@ -252,7 +254,10 @@ export function ShowProjectDetail(PROJECTS) { //Modular DIV for display of proje
     modal.querySelector('.modal_close').addEventListener('click', CloseProjectDetail);
     
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') CloseProjectDetail();
+        if (e.key === 'Escape')
+        {
+            CloseProjectDetail();
+        }
     });
 }
 

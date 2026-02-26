@@ -806,7 +806,6 @@ button {
 }
 
 .modal_body {
-    display: flex;
     gap: 30px;
     padding: 30px;
 }

@@ -25,6 +25,7 @@ export const PROJECTS =
         technologies: ['Unity', 'Blender', 'FMOD'],
         teamsize: '5 people',
         images: ['../assets/placeholder_banner.png'],
+        vids: ['../assets/vids/Trailer_Huddle1.mp4'],
         links: { github: 'https://github.com/PedroGIIIVIII/Huddle'}
     },
     {
