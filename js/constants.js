@@ -92,7 +92,7 @@ export const MODELS =
         polygoncount: '1,054 quads',
         enginereadiness: 'Unreal Engine',
         modellingstyle: 'Retopology from Sculpted Figure',
-        img_assets: ['../assets/model_img/penguin/penguin_material_1.jpg', '../assets/model_img/penguin/penguin_material_2.jpg', '../assets/model_img/penguin/penguin_material_3.png'],
+        img_assets: ['../assets/placeholder_banner.png', '../assets/placeholder_banner.png', '../assets/placeholder_banner.png'],
     },
     {
         id: 'queen',
@@ -109,10 +109,10 @@ export const MODELS =
         name: 'Sword Model',
         description: 'A custom sword made for animation purposes in SourceFilmmaker.',
         software: ['Blender'],
-        polygoncount: '1,569 quads',
+        polygoncount: '0 quads',
         enginereadiness: 'Source Engine',
-        modellingstyle: 'Primitive form modelling',
-        img_assets: ['../assets/model_img/queen/queen_material.jpg', '../assets/model_img/queen/queen_material_2.jpg', '../assets/model_img/queen/queen_material_3.jpg'],
+        modellingstyle: 'Primitive form Modelling',
+        img_assets: ['../assets/placeholder_banner.png', '../assets/placeholder_banner.png', '../assets/placeholder_banner.png'],
     },
     {
         id: 'spacecraft',
@@ -121,7 +121,17 @@ export const MODELS =
         software: ['Blender', 'Substance Painter'],
         polygoncount: '116,064 quads',
         enginereadiness: 'None',
-        modellingstyle: 'Primitive form modelling',
+        modellingstyle: 'Primitive Form Modelling',
         img_assets: ['../assets/model_img/spaceship/high_poly_material_ship.jpg', '../assets/model_img/spaceship/high_poly_material_ship_2.jpg', '../assets/model_img/spaceship/high_poly_material_ship_3.jpg'],
+    },
+    {
+        id: 'envassets',
+        name: 'Environment Pack',
+        description: 'Group of assets used to create the environments in Huddle',
+        software: ['Blender', 'Photoshop'],
+        polygoncount: '0 quads',
+        enginereadiness: 'Unreal Engine',
+        modellingstyle: 'Primitive Form Modelling',
+        img_assets: ['../assets/placeholder_banner.png', '../assets/placeholder_banner.png', '../assets/placeholder_banner.png'],
     }
 ] 
