@@ -82,7 +82,7 @@ export const MODELS =
         polygoncount: '1,482 quads',
         enginereadiness: 'Unreal Engine',
         modellingstyle: 'Retopology from Sculpted Figure',
-        img_assets: ['../assets/model_img/seal/seal_material.jpg', '../assets/model_img/seal/seal_material_2.jpg', '../assets/model_img/seal/seal_material_3.jpg'],
+        img_assets: ['../assets/model_img/seal/seal_material.jpg', '../assets/model_img/seal/seal_material_2.jpg', '../assets/model_img/seal/seal_material_3.jpg', '../assets/model_img/seal/seal_wireframe.jpg'],
     },
     {
         id: 'penguin',
@@ -92,7 +92,7 @@ export const MODELS =
         polygoncount: '1,054 quads',
         enginereadiness: 'Unreal Engine',
         modellingstyle: 'Retopology from Sculpted Figure',
-        img_assets: ['../assets/placeholder_banner.png', '../assets/placeholder_banner.png', '../assets/placeholder_banner.png'],
+        img_assets: ['../assets/model_img/penguin/penguin_material_1.jpg', '../assets/model_img/penguin/penguin_material_2.jpg', '../assets/model_img/penguin/penguin_material_3.jpg'],
     },
     {
         id: 'queen',
@@ -102,7 +102,7 @@ export const MODELS =
         polygoncount: '1,622 quads',
         enginereadiness: 'Unreal Engine',
         modellingstyle: 'Retopology from Sculpted Figure',
-        img_assets: ['../assets/model_img/queen/queen_material.jpg', '../assets/model_img/queen/queen_material_2.jpg', '../assets/model_img/queen/queen_material_3.jpg'],
+        img_assets: ['../assets/model_img/queen/queen_material.jpg', '../assets/model_img/queen/queen_material_2.jpg', '../assets/model_img/queen/queen_material_3.png'],
     },
         {
         id: 'sword',
@@ -122,7 +122,7 @@ export const MODELS =
         polygoncount: '116,064 quads',
         enginereadiness: 'None',
         modellingstyle: 'Primitive Form Modelling',
-        img_assets: ['../assets/model_img/spaceship/high_poly_material_ship.jpg', '../assets/model_img/spaceship/high_poly_material_ship_2.jpg', '../assets/model_img/spaceship/high_poly_material_ship_3.jpg'],
+        img_assets: ['../assets/model_img/spaceship/high_poly_material_ship.jpg', '../assets/model_img/spaceship/high_poly_material_ship_2.jpg', '../assets/model_img/spaceship/high_poly_wireframe_ship.jpg', '../assets/model_img/spaceship/high_poly_wireframe_ship_2.jpg'],
     },
     {
         id: 'envassets',

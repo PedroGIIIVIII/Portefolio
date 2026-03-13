@@ -806,22 +806,34 @@ button {
 }
 
 .modal_body {
-    gap: 30px;
     padding: 30px;
 }
 
 .modal_gallery {
-    flex: 1;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    overflow-x: auto;
+    padding: 20px;
+    border: 4px solid #ffffff;
+}
+
+.modal_img_container{
+    width: auto;
+    height: 350px;
+    color: #ffffff;
+    scrollbar-color: rgb(255, 255, 255) rgb(17, 17, 17);
+    scrollbar-width: thin;
 }
 
 .modal_main_image {
-    width: 100%;
-    height: auto;
+    display: inherit;
+    width: auto;
+    height: 100%;
     border: 2px solid #ffffff;
 }
 
 .modal_info {
-    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 25px;

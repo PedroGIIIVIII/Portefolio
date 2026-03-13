@@ -279,9 +279,18 @@ export function ShowModelDetails(m)
 
             <div class="modal_body">
                 <div class="modal_gallery">
-                    <img src="${m.img_assets[0]}" class="modal_main_image">
-                    <img src="${m.img_assets[1]}" class="modal_main_image">
-                    <img src="${m.img_assets[2]}" class="modal_main_image">
+                    <div class="modal_img_container">
+                        <img src="${m.img_assets[0]}" class="modal_main_image">
+                    </div>
+                    <div class="modal_img_container">
+                        <img src="${m.img_assets[1]}" class="modal_main_image">
+                    </div>
+                    <div class="modal_img_container">
+                        <img src="${m.img_assets[2]}" class="modal_main_image">
+                    </div>
+                    <div class="modal_img_container">
+                        <img src="${m.img_assets[3]}" class="modal_main_image">
+                    </div>
                 </div>
 
                 <div class="modal_info">
