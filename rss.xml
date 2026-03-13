@@ -1,0 +1,14 @@
+<xml version="1.0" enconding="UTF-8"?>
+
+<rss version="2.0">
+    <channel>
+        <title>Pedro Garcia | Portefolio</title>
+        <link>https://pedrogiiiviii.github.io/Portefolio/</link>
+        <description>Personal Portefolio</description>
+        <lastBuildDate>Fri, 13 Mar 2026 15:00:00 GMT</lastBuildDate>
+          <item>
+            <title>RSS Sarted</title>
+            <description>rss was implemented in a basic form in this website</description>
+        </item>
+    </channel>
+</rss>
